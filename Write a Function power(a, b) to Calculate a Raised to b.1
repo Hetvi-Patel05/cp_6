@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int power(int a, int b)
+{
+    int i, result = 1;
+
+    for (i = 1; i <= b; i++)
+    {
+        result = result * a;
+    }
+
+    return result;
+}
+
+int main()
+{
+    int a, b, result;
+
+    printf("Enter the base: ");
+    scanf("%d", &a);
+
+    printf("Enter the exponent: ");
+    scanf("%d", &b);
+
+    if (b < 0)
+    {
+        printf("Please enter a non-negative exponent.");
+        return 0;
+    }
+
+    result = power(a, b);
+
+    printf("%d raised to %d = %d", a, b, result);
+
+    return 0;
+}
